@@ -1,8 +1,8 @@
-Results:
-Duplicate Referecnce
+Rabobank Customer Statement Processor results:
+Duplicate Referecnce :
 ReferenceNumber: 130498 Description: Tickets from Erik de Vries
 ReferenceNumber: 147674 Description: Subscription from Peter Theuß
 ReferenceNumber: 105549 Description: Tickets from Richard de Vries
-Validation Errors
+Validation Errors :
 ReferenceNumber: 130498 Description: Tickets from Erik de Vries
 ReferenceNumber: 165102 Description: Tickets for Rik Theuß

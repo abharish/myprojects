@@ -1,4 +1,4 @@
-package com.robobank.customer;
+package com.robobank.entity;
 
 import java.math.BigDecimal;
 

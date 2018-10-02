@@ -1,4 +1,4 @@
-package com.robobank.customer;
+package com.robobank.customerService;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -11,6 +11,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import com.robobank.entity.TransactionDetails;
+import com.robobank.utils.CustomerMappingUtils;
 
 public class CustomerStatementInXml implements CustomerStatement {
 

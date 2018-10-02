@@ -1,4 +1,4 @@
-package com.robobank.customer;
+package com.robobank.main;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,6 +6,12 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Scanner;
+
+import com.robobank.customerService.CustomerStatement;
+import com.robobank.customerService.CustomerStatementInCsv;
+import com.robobank.customerService.CustomerStatementInXml;
+import com.robobank.entity.TransactionDetails;
+import com.robobank.utils.CustomerMappingUtils;
 
 public class RoboBankApp {
 	
@@ -47,7 +53,7 @@ public class RoboBankApp {
 	}
 	
 	void readFileFormatDetails(RoboBankApp roboBankApp,Scanner scan) {
-		System.out.println("Please enter file format");
+		System.out.println("Please enter file format xml/csv");
 		String fileFormat = scan.nextLine();
 		
 		if(fileFormat==null || fileFormat.trim().length()==0){
@@ -76,10 +82,10 @@ public class RoboBankApp {
 		PrintWriter writer;
 		try {
 			writer = new PrintWriter("RoboBank_result.txt", "UTF-8");
-			writer.println("Results:");
-			writer.println(duplicateReference.size()>0?"Duplicate Referecnce":"No Duplicate Referecnce");
+			writer.println("Rabobank Customer Statement Processor results:");
+			writer.println(duplicateReference.size()>0?"Duplicate Referecnce :":"No Duplicate Referecnce in the file");
 			duplicateReference.forEach(writer::println);
-			writer.println(validationErrors.size()>0?"Validation Errors":"No Validation Errors");
+			writer.println(validationErrors.size()>0?"Validation Errors :":"No Validation Errors in the file");
 			validationErrors.forEach(writer::println);	
 			writer.close();
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {

@@ -1,10 +1,12 @@
-package com.robobank.customer;
+package com.robobank.utils;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.robobank.entity.TransactionDetails;
 
 public class CustomerMappingUtils {
 

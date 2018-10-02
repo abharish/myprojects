@@ -1,6 +1,8 @@
-package com.robobank.customer;
+package com.robobank.customerService;
 
 import java.util.List;
+
+import com.robobank.entity.TransactionDetails;
 
 public interface CustomerStatement {
 
